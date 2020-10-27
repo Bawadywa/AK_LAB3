@@ -1,6 +1,6 @@
 # AK_LAB3
 
--l --list\n
+-l --list
 
 -V --Value (optional param)
 
