@@ -1,3 +1,5 @@
 build:
 	g++ cmd_lab3.cpp -o lab3
 
+run:
+	./lab3 -l -h -V13 -d

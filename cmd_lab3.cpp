@@ -11,8 +11,8 @@ int main(int argc, char *argv[]){
   map <string, bool> used_keys;
 
   int index = -1;
-  const char* short_options = "hlvdrcRC::?";  
-  //h-help, v-version, list, d-download, r-run, c-cat
+  const char* short_options = "hlvdrcRCV::?";  
+  //h-help, v-version, list, d-download, r-run, c-cat, V-Value
   
   const struct option long_options[] = {
   
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
     	{"cat", 0, NULL, 'c'},
     	{"Rock", 0, NULL, 'R'},
     	{"Cut", 0, NULL, 'C'},
-    	
+    	{"Value", 25, NULL, 'V'},
     };
 
  
@@ -90,6 +90,20 @@ int main(int argc, char *argv[]){
       if (used_keys["d"] == false) {
           printf("Arg: DOWNLOAD\n"); 
           used_keys["d"] = true;
+          break;
+      }
+      break;
+    }
+    case 'V': {
+      if (used_keys["V"] == false) {
+      	if (optarg == NULL){
+      		printf("Arg: Value NULL\n");
+      		used_keys["V"] == true;
+      	}else{
+      		printf("Arg: Value is %s\n", optarg); 
+          	used_keys["V"] = true;
+          }
+          
           break;
       }
       break;
