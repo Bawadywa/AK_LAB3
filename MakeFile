@@ -1,0 +1,3 @@
+build:
+	g++ cmd_lab3.cpp -o lab3
+
