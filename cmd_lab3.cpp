@@ -98,7 +98,7 @@ int main(int argc, char *argv[]){
       if (used_keys["V"] == false) {
       	if (optarg == NULL){
       		printf("Arg: Value NULL\n");
-      		used_keys["V"] == true;
+      		used_keys["V"] = true;
       	}else{
       		printf("Arg: Value is %s\n", optarg); 
           	used_keys["V"] = true;
